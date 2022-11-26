@@ -3,13 +3,30 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
+
 """Implementa una aplicación en Python que permita la administración de una agenda de contactos telefónicos."""
 
+#CREAR ARCHIVO
 """Crear el fichero (vacío) que contenga los nombres y teléfonos de clientes. El fichero se llamará “Miagenda.txt. Deberá comprobarse si el fichero existe o no."""
 """Si no existe, el programa pedirá si queremos crearlo"""
 """Si existe, deberá pedir si queremos dejarlo en blanco"""
+#AÑADIR CONTACTO
+"""Podrá añadir al fichero un nuevo cliente, siguiendo la estructura en pareja: nombre,teléfono."""
+"""El formato es: Nombre del cliente y teléfono separados por una coma y cada cliente en una línea diferente.
+No deberán haber saltos de línea al principio o al final del documento. No habrá nombres repetidos. 
+Se deberá distinguir entre mayúsculas y minúsculas."""
+#CONSULTAR TELEFONO
+"""Se podrá consultar el número de teléfono de un cliente, para lo cual el programa nos preguntará el nombre del cliente del que
+necesitamos saber su teléfono."""
+#BORRAR CONTACTO
+"""Se podrá eliminar un cliente y su teléfono de la lista."""
+#MENÚ
+"""Crea un menú que permita gestionar la agenda. El menú deberá llamar a las funciones:"""
+"""Crear fichero,Añadir contacto,Consultar teléfono,Borrar contacto,Salir"""
 
-nombre_archivo = "Miagenda.txt"
+
+#CREAR ARCHIVO
+nombre_archivo = "MiAgenda.txt"
 def crearFichero():
     try:
         with open(nombre_archivo) as f:
@@ -25,12 +42,7 @@ def crearFichero():
 
 
 
-
-"""Podrá añadir al fichero un nuevo cliente, siguiendo la estructura en pareja: nombre,teléfono."""
-"""El formato es: Nombre del cliente y teléfono separados por una coma y cada cliente en una línea diferente.
-No deberán haber saltos de línea al principio o al final del documento. No habrá nombres repetidos. 
-Se deberá distinguir entre mayúsculas y minúsculas."""
-
+#AÑADIR CONTACTO
 def añadirContacto():
     comprobar = True
     file = open(nombre_archivo,"r+")
@@ -48,9 +60,8 @@ def añadirContacto():
 
 
 
-"""Se podrá consultar el número de teléfono de un cliente, para lo cual el programa nos preguntará el nombre del cliente del que
-    necesitamos saber su teléfono."""
 
+#CONSULTAR TELÉFONO
 def consultarTelefono():
     file = open(nombre_archivo,"r")
     contactos = file.readlines()
@@ -65,8 +76,8 @@ def consultarTelefono():
 
 
 
-"""Se podrá eliminar un cliente y su teléfono de la lista, quedando el fichero si dicho cliente."""
 
+#BORRAR CONTACTO
 def borrarContacto():
     file = open(nombre_archivo,"r+")
     contactos = file.readlines()
@@ -79,13 +90,7 @@ def borrarContacto():
 
 
 
-"""Crea un menú que permita gestionar la agenda. El menú deberá llamar a las funciones:"""
-"""Crear fichero"""
-"""Añadir contacto"""
-"""Consultar teléfono"""
-"""Borrar contacto"""
-"""Salir"""
-
+#MENÚ
 opcion = 0
 while True:
     opcion = int(input("""Que quieres hacer ?
