@@ -1,0 +1,3 @@
+El numero es: 1
+El numero es: 2
+El numero es: 3
