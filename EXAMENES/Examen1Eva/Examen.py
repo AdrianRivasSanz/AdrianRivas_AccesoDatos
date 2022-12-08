@@ -120,23 +120,3 @@ Esta opción elimina aquellos datos del fichero de desvío que existan en el
 fichero de control.
 
 4. Salir"""
-
-def Consulta_Errores(ficheroexam4.txt):
-    
-def Existe_Error(ficheroexam3.txt, ficheroexam4.txt):
-    
-def Borrar_Errores(ficheroexam3.txt, ficheroexam4.txt):
-
-    
-def menu():
-    print("1 - Consultar Errores")
-    print("2 - Existe error")
-    print("3 - Borrar errores")
-    print("4 - Salir")
-    
-    opcion1 = str(input("Introduce el número de la opción: "))
-    return opcion1
-
-def inicio():
-    
-inicio()
