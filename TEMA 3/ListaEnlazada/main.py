@@ -17,15 +17,15 @@ def insertar_nodo(lista):
 
 
 # 3. BUSCAR NODO
-def buscar_nodo():
+#def buscar_nodo():
 
 
 # 4. ELIMINAR NODO
-def eliminar_nodo():
+#def eliminar_nodo():
 
 
 # Menu
-def menu():
+#def menu():
     print("¿Que quieres hacer?")
     print("1. Crear nodo")
     print("2. Insertar nodo")
