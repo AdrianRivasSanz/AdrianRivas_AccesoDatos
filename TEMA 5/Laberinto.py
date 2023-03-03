@@ -16,7 +16,7 @@ final = "E"
 
 #3. AÑADO EL LABERINTO
 def Dijkstra(laberinto):
-    minimo = 1000
+    minimo = 100
     posicion = ""
 
     for i in range(len(laberinto)):
@@ -39,6 +39,7 @@ def Dijkstra(laberinto):
         if i[1] == final and minimo > int(i[2:]):
             minimo = int(i[2:])
             posicion = i
+            
     return f'El camino corto es por {posicion}'
 
 print(Dijkstra(grafo))
